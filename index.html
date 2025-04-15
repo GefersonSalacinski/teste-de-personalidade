@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Personalidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Teste de Personalidade</h1>
+        <p>Responda as perguntas e descubra qual linguagem combina com você!</p>
+    </header>
+    <main>
+        <form id="quiz">
+            <div class="question">
+              <p>1. Você prefere projetos mais:</p>
+              <label><input type="checkbox" name="q1" value="frontend"> Visuais</label>
+              <label><input type="checkbox" name="q1" value="backend"> Complexos</label>
+            </div>
+            <div class="question">
+              <p>2. O que mais te motiva?:</p>
+              <label><input type="checkbox" name="q2" value="frontend"> Design atrativo</label>
+              <label><input type="checkbox" name="q2" value="backend"> Lógica eficiente</label>
+            </div>
+            <div class="question">
+              <p>3. Qual tipo de tarefa você prefere trabalhar?</p>
+              <label><input type="checkbox" name="q3" value="frontend"> Criar interfaces e experiências de usuário</label>
+              <label><input type="checkbox" name="q3" value="backend"> Resolver problemas técnicos e de desempenho</label>
+          </div>
+          <div class="question">
+              <p>4. O que você valoriza mais em um projeto?</p>
+              <label><input type="checkbox" name="q4" value="frontend"> Aparência estética e usabilidade</label>
+              <label><input type="checkbox" name="q4" value="backend"> Estrutura lógica e funcionalidade</label>
+          </div>
+          <div class="question">
+              <p>5. Qual tipo de linguagem você prefere usar?</p>
+              <label><input type="checkbox" name="q5" value="frontend"> Linguagens como HTML, CSS e JavaScript</label>
+              <label><input type="checkbox" name="q5" value="backend"> Linguagens como Python, Java ou C++</label>
+          </div>
+          <div class="question">
+              <p>6. Você se considera mais:</p>
+              <label><input type="checkbox" name="q6" value="frontend"> Criativo e focado na experiência do usuário</label>
+              <label><input type="checkbox" name="q6" value="backend"> Analítico e focado na solução de problemas</label>
+          </div>
+          <div class="question">
+              <p>7. O que é mais interessante para você?</p>
+              <label><input type="checkbox" name="q7" value="frontend"> Transformar ideias em visuais atrativos</label>
+              <label><input type="checkbox" name="q7" value="backend"> Garantir que tudo funcione corretamente</label>
+          </div>
+          <div class="question">
+              <p>8. Qual ambiente você prefere?</p>
+              <label><input type="checkbox" name="q8" value="frontend"> Navegadores e interfaces</label>
+              <label><input type="checkbox" name="q8" value="backend"> Servidores e bancos de dados</label>
+          </div>
+          <div class="question">
+              <p>9. O que você gosta de aprender?</p>
+              <label><input type="checkbox" name="q9" value="frontend"> Novas tendências em design</label>
+              <label><input type="checkbox" name="q9" value="backend"> Novas ferramentas e técnicas de programação</label>
+          </div>
+          <div class="question">
+              <p>10. Você prefere trabalhar:</p>
+              <label><input type="checkbox" name="q10" value="frontend"> Interagindo diretamente com usuários</label>
+              <label><input type="checkbox" name="q10" value="backend"> Nos bastidores garantindo que tudo funcione</label>
+          </div>          
+            <button type="submit">Ver Resultado</button>
+          </form>
+          
+        <section id="Resultado">
+            <h2>Seu Resultado</h2>
+            <p id="resultado"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
