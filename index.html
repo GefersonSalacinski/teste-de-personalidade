@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="alternar-tema" aria-label="Alternar tema">🌙</button>
+    <button id="alternar-tema" aria-label="Alternar tema">Modo Escuro</button>
     <script src="tema.js"></script>
   <header>
     <h1>💰 Simulador de Investimentos</h1>
@@ -17,10 +17,10 @@
     <form id="formulario-investimento">
       
       <label for="valor-inicial">Valor Inicial (R$):</label>
-      <input type="number" id="valor-inicial" required>
+      <input type="text" id="valor-inicial" placeholder="Ex: R$1.000,00 (mínimo recomendado)" required>
 
       <label for="taxa-juros">Taxa de Juros (% ao mês):</label>
-      <input type="number" id="taxa-juros" step="0.01" required>
+      <input type="text" id="taxa-juros" placeholder="Ex: 0,20 (válido para cenários)" required>
 
       <label for="tipo-juros">Tipo de Juros:</label>
       <select id="tipo-juros">
@@ -29,7 +29,7 @@
       </select>
 
       <label for="taxa-inflacao">Taxa de Inflação (%):</label>
-      <input type="number" id="taxa-inflacao" step="0.01">
+      <input type="text" id="taxa-inflacao" placeholder="Ex: 3,00 (estimativa média)">
 
       <label for="cenarios-investimento">Cenários:</label>
       <select id="cenarios-investimento">
@@ -39,11 +39,12 @@
       </select>
 
       <label for="meta-valor">Objetivo (R$):</label>
-      <input type="number" id="meta-valor" step="0.01">
+      <input type="text" id="meta-valor" placeholder="Ex: R$10.000,00 (valor desejado)" step="0.01">
+
       <button type="button" id="calcular-meta">Calcular Meta</button>
 
       <label for="contribuicao-mensal">Aporte Mensal (R$):</label>
-      <input type="number" id="contribuicao-mensal" step="0.01">
+      <input type="text" id="contribuicao-mensal" placeholder="Ex: R$800,00 (mínimo recomendado)" step="0.01">
 
       <label for="escala-tempo">Escala de Tempo:</label>
       <select id="escala-tempo">
@@ -52,13 +53,14 @@
       </select>
 
       <label for="periodo-investimento">Período (meses):</label>
-      <input type="number" id="periodo-investimento" required>
+      <input type="text" id="periodo-investimento" placeholder="Ex: 24 (tempo estimado em meses)" required>
 
       <button type="submit">Calcular</button>
     </form>
 
     <section id="resultados">
       <h2>Resultados</h2>
+      <p id="resumo-resultado"></p>
       <p id="valor-final">Rendimento Final: R$ 0,00</p>
       <canvas id="grafico-investimentos"></canvas>
     </section>
