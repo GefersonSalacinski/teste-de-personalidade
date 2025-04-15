@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Investimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="alternar-tema" aria-label="Alternar tema">🌙</button>
+    <script src="tema.js"></script>
+  <header>
+    <h1>💰 Simulador de Investimentos</h1>
+  </header>
+
+  <main>
+    <form id="formulario-investimento">
+      
+      <label for="valor-inicial">Valor Inicial (R$):</label>
+      <input type="number" id="valor-inicial" required>
+
+      <label for="taxa-juros">Taxa de Juros (% ao mês):</label>
+      <input type="number" id="taxa-juros" step="0.01" required>
+
+      <label for="tipo-juros">Tipo de Juros:</label>
+      <select id="tipo-juros">
+        <option value="composto">Composto</option>
+        <option value="simples">Simples</option>
+      </select>
+
+      <label for="taxa-inflacao">Taxa de Inflação (%):</label>
+      <input type="number" id="taxa-inflacao" step="0.01">
+
+      <label for="cenarios-investimento">Cenários:</label>
+      <select id="cenarios-investimento">
+        <option value="conservador">Conservador</option>
+        <option value="moderado">Moderado</option>
+        <option value="agressivo">Agressivo</option>
+      </select>
+
+      <label for="meta-valor">Objetivo (R$):</label>
+      <input type="number" id="meta-valor" step="0.01">
+      <button type="button" id="calcular-meta">Calcular Meta</button>
+
+      <label for="contribuicao-mensal">Aporte Mensal (R$):</label>
+      <input type="number" id="contribuicao-mensal" step="0.01">
+
+      <label for="escala-tempo">Escala de Tempo:</label>
+      <select id="escala-tempo">
+        <option value="mensal">Mensal</option>
+        <option value="anual">Anual</option>
+      </select>
+
+      <label for="periodo-investimento">Período (meses):</label>
+      <input type="number" id="periodo-investimento" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <section id="resultados">
+      <h2>Resultados</h2>
+      <p id="valor-final">Rendimento Final: R$ 0,00</p>
+      <canvas id="grafico-investimentos"></canvas>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
